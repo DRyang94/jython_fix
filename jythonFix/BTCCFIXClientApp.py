@@ -1,27 +1,27 @@
-package com.btcchina.fix;
 
-import java.io.IOException;
 
-import org.apache.log4j.Logger;
+import java.io.IOException as IOException
 
-import com.btcchina.fix.util.AccountManger;
-import com.btcchina.fix.util.AccountMangerTest;
-import com.btcchina.fix.util.IniReader;
+import org.apache.log4j.Logger as Logger
 
-import quickfix.DoNotSend;
-import quickfix.FieldNotFound;
-import quickfix.IncorrectDataFormat;
-import quickfix.IncorrectTagValue;
-import quickfix.RejectLogon;
-import quickfix.Session;
-import quickfix.SessionID;
-import quickfix.UnsupportedMessageType;
+import util.AccountManger as AccountManger
+import util.AccountMangerTest as AccountMangerTest
+import util.IniReader as IniReader
 
-/**
- * BTCChina FIX Client
- * @author BTCChina
- */
-public class BTCCFIXClientApp  implements quickfix.Application {
+import quickfix.DoNotSend as DoNotSend
+import quickfix.FieldNotFound as FieldNotFound
+import quickfix.IncorrectDataFormat as IncorrectDataFormat
+import quickfix.IncorrectTagValue as IncorrectTagValue
+import quickfix.RejectLogon as RejectLogon
+import quickfix.Session as Session
+import quickfix.SessionID as SessionID
+import quickfix.UnsupportedMessageType as UnsupportedMessageType
+
+# /**
+#  * BTCChina FIX Client
+#  * @author BTCChina
+#  */
+class BTCCFIXClientApp  implements quickfix.Application {
 	private static final Logger log = Logger.getLogger(BTCCFIXClientApp.class);
 	
 	private IniReader inireader = initConfig("config.txt");

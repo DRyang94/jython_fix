@@ -21,9 +21,7 @@ import quickfix.SocketInitiator;
  * BTCChina FIX API Client 
  * @author BTCChina
  */
-class BTCCFIXClient():
-	def function(self):
-		pass
+public class BTCCFIXClient {
 
 	static public boolean isTest = false;	//是否以测试方式运行
 	

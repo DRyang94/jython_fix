@@ -1,4 +1,8 @@
+#!/usr/local/bin/jython
+#coding:utf-8
 # package com.btcchina.fix.util;
+import sys
+sys.path.append("lib/*.jar")
 
 import java.util.Iterator as Iterator
 import java.util.LinkedList as LinkedList
@@ -159,7 +163,7 @@ class AccountManger():
             except Exception, e:
                 print e
                 raise e
-            Group g = Group(groupCountTag, 0)
+            g = Group(groupCountTag, 0)
             i = 1
             while fieldMap.hasGroup(i,groupCountTag):
                 try:
@@ -403,7 +407,7 @@ class AccountManger():
                     if self.dataDict.hasFieldValue(field.getTag()):
                         value = self.dataDict.getValueName(field.getTag(), value) + " (" + value + ")"
                     # 批量查询
-                    if self.dataDict.getFieldName(field.getTag()) == "MassStatusReqID" && value == ReqConfig.reqAllCheckID:
+                    if self.dataDict.getFieldName(field.getTag()) == "MassStatusReqID" and value == ReqConfig.reqAllCheckID:
                         self.checkOrderBackWithID(fieldMap)
                         return
                     # 交易
@@ -446,7 +450,7 @@ class AccountManger():
         while groupsKeys.hasNext():
             groupCountTag = int(groupsKeys.next())
             print prefix + dataDict.getFieldName(groupCountTag) + ": count = " + fieldMap.getInt(groupCountTag)
-            g = new Group(groupCountTag, 0)
+            g = Group(groupCountTag, 0)
             i = 1
             while fieldMap.hasGroup(i, groupCountTag):
                 if i > 1:

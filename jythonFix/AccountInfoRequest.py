@@ -1,3 +1,6 @@
+#!/usr/local/bin/jython
+#coding:utf-8
+
 import quickfix.FieldNotFound
 import quickfix.fix44.Message
 

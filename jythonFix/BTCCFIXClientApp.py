@@ -1,4 +1,5 @@
-
+#!/usr/local/bin/jython
+#coding:utf-8
 
 import java.io.IOException as IOException
 

@@ -1,3 +1,5 @@
+#!/usr/local/bin/jython
+#coding:utf-8
 
 import quickfix.Message as Message
 import quickfix.field.MDEntryType as MDEntryType

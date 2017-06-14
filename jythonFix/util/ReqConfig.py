@@ -1,3 +1,5 @@
+#!/usr/local/bin/jython
+#coding:utf-8
 # package com.btcchina.fix.util;
 
 reqBuyOrderID = "10001"			#//交易购买请求唯一ID

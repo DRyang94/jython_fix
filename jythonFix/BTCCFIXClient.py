@@ -1,9 +1,11 @@
-
+#!/usr/local/bin/jython
+#coding:utf-8
 import sys
 
 sys.path.append("lib/*.jar")
+sys.path.append("util")
 
-import util.AccountMangerTest as AccountMangerTest
+import AccountManger as AccountManger
 import BTCCFIXClientApp
 
 import java.io.IOException as IOException

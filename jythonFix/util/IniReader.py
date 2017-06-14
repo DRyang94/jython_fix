@@ -1,3 +1,5 @@
+#!/usr/local/bin/jython
+#coding:utf-8
 # package com.btcchina.fix.util;
 
 import java.io.BufferedReader as BufferedReader

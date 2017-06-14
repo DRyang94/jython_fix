@@ -39,4 +39,3 @@ class BTCCFIXClient():
 			messageFactory = DefaultMessageFactory()
 			initiator = SocketInitiator(app, storeFactory, settings, logFactory, messageFactory)
 			initiator.block()
-}

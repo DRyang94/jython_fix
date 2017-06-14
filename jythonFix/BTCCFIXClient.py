@@ -1,5 +1,8 @@
 
 import sys
+
+sys.path.append("lib/*.jar")
+
 import util.AccountMangerTest as AccountMangerTest
 import BTCCFIXClientApp
 
@@ -39,3 +42,7 @@ class BTCCFIXClient():
 			messageFactory = DefaultMessageFactory()
 			initiator = SocketInitiator(app, storeFactory, settings, logFactory, messageFactory)
 			initiator.block()
+
+if __name__ == '__main__':
+    btccclient = BTCCFIXClient()
+    btccclient.main()

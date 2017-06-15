@@ -551,3 +551,2597 @@ TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
 	at quickfix.Session.next(Session.java:973)
 	... 26 more
 
+20170615-05:46:43: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-05:46:43: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-05:46:44: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:46:44: Initiated logon request
+20170615-05:46:45: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:46:45: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:46:55: Disconnecting: Timed out waiting for logon response
+20170615-05:46:56: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:46:56: Initiated logon request
+20170615-05:46:57: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:46:57: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:47:07: Disconnecting: Timed out waiting for logon response
+20170615-05:47:08: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:47:08: Initiated logon request
+20170615-05:47:09: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:47:09: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:47:19: Disconnecting: Timed out waiting for logon response
+20170615-05:47:21: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:47:21: Initiated logon request
+20170615-05:47:21: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:47:21: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:47:31: Disconnecting: Timed out waiting for logon response
+20170615-05:47:32: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:47:32: Initiated logon request
+20170615-05:47:33: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:47:33: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:49:12: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-05:49:12: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-05:49:14: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:49:14: Initiated logon request
+20170615-05:49:14: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:49:14: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:49:25: Disconnecting: Timed out waiting for logon response
+20170615-05:49:26: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:49:26: Initiated logon request
+20170615-05:49:27: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:49:27: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:49:38: Disconnecting: Timed out waiting for logon response
+20170615-05:49:39: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:49:39: Initiated logon request
+20170615-05:49:40: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:49:40: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:49:51: Disconnecting: Timed out waiting for logon response
+20170615-05:49:52: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:49:52: Initiated logon request
+20170615-05:49:52: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:49:52: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:50:03: Disconnecting: Timed out waiting for logon response
+20170615-05:50:04: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:04: Initiated logon request
+20170615-05:50:04: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:50:04: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:50:15: Disconnecting: Timed out waiting for logon response
+20170615-05:50:16: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:16: Initiated logon request
+20170615-05:50:17: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:50:17: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:50:27: Disconnecting: Timed out waiting for logon response
+20170615-05:50:28: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:28: Initiated logon request
+20170615-05:50:33: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:33: Initiated logon request
+20170615-05:50:33: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:50:33: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:50:44: Disconnecting: Timed out waiting for logon response
+20170615-05:50:45: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:45: Initiated logon request
+20170615-05:50:46: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:50:46: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:50:56: Disconnecting: Timed out waiting for logon response
+20170615-05:50:57: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:50:57: Initiated logon request
+20170615-05:50:58: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:50:58: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:57:53: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-05:57:53: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-05:57:55: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:57:55: Initiated logon request
+20170615-05:57:57: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:57:57: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-05:58:08: Disconnecting: Timed out waiting for logon response
+20170615-05:58:09: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-05:58:09: Initiated logon request
+20170615-05:58:10: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-05:58:10: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$0.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:06:30: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:06:30: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:06:31: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:06:31: Initiated logon request
+20170615-06:06:33: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:06:33: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:06:43: Disconnecting: Timed out waiting for logon response
+20170615-06:06:44: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:06:44: Initiated logon request
+20170615-06:06:45: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:06:45: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:12:20: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:12:20: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:12:21: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:12:21: Initiated logon request
+20170615-06:12:21: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:12:21: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:12:32: Disconnecting: Timed out waiting for logon response
+20170615-06:12:33: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:12:33: Initiated logon request
+20170615-06:12:34: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:12:34: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:14:01: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:14:02: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:14:03: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:14:03: Initiated logon request
+20170615-06:14:03: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:14:03: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:14:14: Disconnecting: Timed out waiting for logon response
+20170615-06:16:00: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:16:00: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:16:01: Application exception in toAdmin()
+TypeError: toAdmin() takes exactly 2 arguments (3 given)
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:229)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.core.PyObject._jcall(PyObject.java:3658)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.toAdmin(Unknown Source)
+	at quickfix.Session.sendRaw(Session.java:2391)
+	at quickfix.Session.generateLogon(Session.java:1867)
+	at quickfix.Session.next(Session.java:1767)
+	at quickfix.mina.SessionConnector$SessionTimerTask.run(SessionConnector.java:283)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:442)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.FutureTask.runAndReset(FutureTask.java:198)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:138)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:238)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:987)
+	at org.quickfixj.java4.edu.emory.mathcs.backport.java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:528)
+	at java.lang.Thread.run(Thread.java:745)
+
+20170615-06:16:01: Initiated logon request
+20170615-06:16:03: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:16:03: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:19:36: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:19:36: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:19:38: Initiated logon request
+20170615-06:19:38: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:19:38: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:19:49: Disconnecting: Timed out waiting for logon response
+20170615-06:19:50: Initiated logon request
+20170615-06:25:37: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:25:37: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:25:38: Initiated logon request
+20170615-06:25:39: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:25:39: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:25:50: Disconnecting: Timed out waiting for logon response
+20170615-06:25:51: Initiated logon request
+20170615-06:25:52: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:25:52: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:26:02: Disconnecting: Timed out waiting for logon response
+20170615-06:26:03: Initiated logon request
+20170615-06:26:04: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:26:04: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:33:23: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:33:23: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER
+20170615-06:33:24: Initiated logon request
+20170615-06:33:25: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:33:25: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:33:35: Disconnecting: Timed out waiting for logon response
+20170615-06:33:36: Initiated logon request
+20170615-06:33:37: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:33:37: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:33:47: Disconnecting: Timed out waiting for logon response
+20170615-06:33:49: Initiated logon request
+20170615-06:33:51: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:33:51: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:34:02: Disconnecting: Timed out waiting for logon response
+20170615-06:34:03: Initiated logon request
+20170615-06:34:04: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170615-06:34:04: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+quickfix.RuntimeError: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at quickfix.Session.next(Session.java:1095)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy$SessionMessageEvent.processMessage(SingleThreadedEventHandlingStrategy.java:114)
+	at quickfix.mina.SingleThreadedEventHandlingStrategy.block(SingleThreadedEventHandlingStrategy.java:77)
+	at quickfix.SocketInitiator.block(SocketInitiator.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:186)
+	at org.python.core.PyReflectedFunction.__call__(PyReflectedFunction.java:204)
+	at org.python.core.PyObject.__call__(PyObject.java:461)
+	at org.python.core.PyObject.__call__(PyObject.java:465)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.mainRun$3(BTCCFIXClient.py:57)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:138)
+	at org.python.core.PyFunction.__call__(PyFunction.java:413)
+	at org.python.core.PyMethod.__call__(PyMethod.java:126)
+	at org.python.pycode._pyx0.f$0(BTCCFIXClient.py:61)
+	at org.python.pycode._pyx0.call_function(BTCCFIXClient.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1386)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.python.util.jython.run(jython.java:362)
+	at org.python.util.jython.main(jython.java:142)
+Caused by: Traceback (most recent call last):
+  File "/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py", line 50, in fromAdmin
+    self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+TypeError: unsupported operand type(s) for +: 'quickfix.SessionID' and 'str'
+
+	at org.python.core.Py.TypeError(Py.java:259)
+	at org.python.core.PyObject._basic_add(PyObject.java:2141)
+	at org.python.core.PyObject._add(PyObject.java:2119)
+	at BTCCFIXClientApp$py.fromAdmin$3(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py:50)
+	at BTCCFIXClientApp$py.call_function(/Users/junpengzhang/doc/github/jython_fix/jythonFix/BTCCFIXClientApp.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:167)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:307)
+	at org.python.core.PyBaseCode.call(PyBaseCode.java:198)
+	at org.python.core.PyFunction.__call__(PyFunction.java:482)
+	at org.python.core.PyMethod.instancemethod___call__(PyMethod.java:237)
+	at org.python.core.PyMethod.__call__(PyMethod.java:228)
+	at org.python.core.PyMethod.__call__(PyMethod.java:218)
+	at org.python.core.PyMethod.__call__(PyMethod.java:213)
+	at org.python.core.PyObject._jcallexc(PyObject.java:3626)
+	at org.python.proxies.BTCCFIXClientApp$BTCCFIXClientApp$1.fromAdmin(Unknown Source)
+	at quickfix.Session.fromCallback(Session.java:1696)
+	at quickfix.Session.verify(Session.java:1650)
+	at quickfix.Session.nextLogon(Session.java:1979)
+	at quickfix.Session.next(Session.java:973)
+	... 26 more
+
+20170615-06:35:35: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170615-06:35:35: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c->BTCC-FIX-SERVER

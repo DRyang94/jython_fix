@@ -84,6 +84,7 @@ class BTCCFIXClientApp(Application):
                 print e
                 raise e
     def onCreate(self,sessionID):
+        print 'id======>',sessionID
         try:
             Session.lookupSession(sessionID).reset()
         except Exception, e:
@@ -91,9 +92,12 @@ class BTCCFIXClientApp(Application):
         self.log.info(str(sessionID)+"------ onCreate Session-------"+str(sessionID))
 
     def onLogon(self,sessionID):
+        print 'sessionID----->',sessionID
         def logonthreadrun(sid):
-            message = BTCCMarketDataRequest.myMarketData("BTCCNY")
+            marketreauest = BTCCMarketDataRequest.BTCCMarketDataRequest()
+            message = marketreauest.myMarketData("BTCCNY")
             Session.lookupSession(sid).send(message)
+            print "sid------>",sid
             try:
                 sleep(5000)
             except Exception, e:
@@ -108,9 +112,10 @@ class BTCCFIXClientApp(Application):
     def onLogout(self, sessionID):
         self.log.info(str(sessionID) + "------ onLogout-------" + str(sessionID))
 
-    def toAdmin(msg,sessionID):
+    def toAdmin(self,msg,sessionID):
+        print msg
         self.log.info(str(sessionID) + "------ toAdmin-------" + str(sessionID))
 
-    def toApp(msg,sessionID):
+    def toApp(self,msg,sessionID):
         self.log.info(str(sessionID) + "------ toApp-------" + str(sessionID))
 

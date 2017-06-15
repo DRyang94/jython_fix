@@ -28,6 +28,8 @@ import quickfix.fix44.NewOrderSingle as NewOrderSingle
 
 import ReqConfig
 
+import AccReqID
+
 class BTCCTradingRequest():
     def __init__(self):
         self.HMAC_SHA1_ALGORITHM = "HmacSHA1"
@@ -160,7 +162,7 @@ class BTCCTradingRequest():
         accountString = self.getAccountString(accesskey, secretkey, methodstr)
             
         accountInfoRequest.set(Account(accountString))
-        accountInfoRequest.set(com.btcchina.fix.AccReqID("123"))
+        accountInfoRequest.set(AccReqID.AccReqID("123"))
         return accountInfoRequest
         
     def getAccountString(self,accesskey,secretkey,methodstr):

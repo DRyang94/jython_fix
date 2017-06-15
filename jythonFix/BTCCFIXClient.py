@@ -21,6 +21,8 @@ sys.path.append("lib/slf4j-log4j12-1.6.3.jar")
 sys.path.append("util")
 sys.path.append("data")
 
+print sys.path
+
 import AccountManger as AccountManger
 import BTCCFIXClientApp
 

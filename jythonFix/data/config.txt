@@ -2,5 +2,5 @@
 PriceStep=1.2
 OnceCount=0.001
 OffSet=0.48
-acckey=02f8e7c4-6a9a-4dff-8ab8-e246b8d1800x
-seckey=bb93a014-1a7d-4ee1-b925-6b2b3142590y
+acckey=02f8e7cb-6a9a-4dff-8ab8-e246b8d1800c
+seckey=bb93a012-1a7d-4ee1-b925-6b2b31425901

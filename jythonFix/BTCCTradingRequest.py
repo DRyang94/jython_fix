@@ -26,7 +26,7 @@ import quickfix.field.Symbol as Symbol
 import quickfix.field.TransactTime as TransactTime
 import quickfix.fix44.NewOrderSingle as NewOrderSingle
 
-import util.ReqConfig as ReqConfig
+import ReqConfig
 
 class BTCCTradingRequest():
     def __init__(self):
@@ -235,7 +235,7 @@ class BTCCTradingRequest():
             market = market.toUpperCase()
         priceString = None
         amountString = None
-        if (not market) || market == '' || market == "CNYBTC" || market== "BTCCNY":
+        if (not market) or market == '' or market == "CNYBTC" or market == "BTCCNY":
         
             market = "BTCCNY";
             if not price or price <= 0:
@@ -244,7 +244,7 @@ class BTCCTradingRequest():
             else:
                 priceString = "%f"%(price) 
             amountString = "%f"%(amount)
-        elif market == "CNYLTC") || market == "LTCCNY":
+        elif market == "CNYLTC" or market == "LTCCNY":
             market = "LTCCNY";
             if price == None or price <= 0:
             
@@ -254,7 +254,7 @@ class BTCCTradingRequest():
             
             amountString = "%f"%(amount)
 
-        elif market == "BTCLTC" || market == "LTCBTC":
+        elif market == "BTCLTC" or market == "LTCBTC":
         
             market = "LTCBTC"
             if not price or price == '':
@@ -277,7 +277,7 @@ class BTCCTradingRequest():
             market = market.toUpperCase()
         priceString = None
         amountString = None
-        if (not market) || market == '' || market == "CNYBTC" || market== "BTCCNY":
+        if (not market) or market == '' or market == "CNYBTC" or market == "BTCCNY":
         
             market = "BTCCNY";
             if not price or price <= 0:
@@ -286,7 +286,7 @@ class BTCCTradingRequest():
             else:
                 priceString = "%f"%(price) 
             amountString = "%f"%(amount)
-        elif market == "CNYLTC") || market == "LTCCNY":
+        elif market == "CNYLTC" or market == "LTCCNY":
             market = "LTCCNY";
             if price == None or price <= 0:
             
@@ -296,7 +296,7 @@ class BTCCTradingRequest():
             
             amountString = "%f"%(amount)
 
-        elif market == "BTCLTC" || market == "LTCBTC":
+        elif market == "BTCLTC" or market == "LTCBTC":
         
             market = "LTCBTC"
             if not price or price == '':

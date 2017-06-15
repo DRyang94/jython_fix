@@ -5,9 +5,8 @@ import java.io.IOException as IOException
 
 import org.apache.log4j.Logger as Logger
 
-import util.AccountManger as AccountManger
-import util.AccountMangerTest as AccountMangerTest
-import util.IniReader as IniReader
+import AccountManger
+import IniReader as IniReader
 
 import quickfix.DoNotSend as DoNotSend
 import quickfix.FieldNotFound as FieldNotFound
@@ -18,28 +17,30 @@ import quickfix.Session as Session
 import quickfix.SessionID as SessionID
 import quickfix.UnsupportedMessageType as UnsupportedMessageType
 
+import quickfix.Application as Application
 
 import threading
 # /**
 #  * BTCChina FIX Client
 #  * @author BTCChina
 #  */
-class BTCCFIXClientApp(quickfix.Application):
+class BTCCFIXClientApp(Application):
     def __init__(self):
+        Application.__init__(self)
         self.log = Logger.getLogger(BTCCFIXClientApp)
     
-        self.inireader = initConfig("config.txt");
+        self.inireader = self.initConfig("data/config.txt");
         self.isTest = True   #是否以测试方式运行
         
         self.runType = 1    #//程序运行方式,1.LTCCNY现货,2.BTCCNY现货,3.BTCLTC现货,4.BTCCNY期货
     
-        self.priceStep = float(inireader.getValue("config", "PriceStep"))       #//价格梯度
-        self.oneCount = float(inireader.getValue("config", "PriceStep"))        #单次交易量
-        self.offset = float(inireader.getValue("config", "OffSet"))             #价格移动
-        self.priceStep = float(inireader.getValue("config", "PriceStep"))       #价格梯度
+        self.priceStep = float(self.inireader.getValue("config", "PriceStep"))       #//价格梯度
+        self.oneCount = float(self.inireader.getValue("config", "PriceStep"))        #单次交易量
+        self.offset = float(self.inireader.getValue("config", "OffSet"))             #价格移动
+        self.priceStep = float(self.inireader.getValue("config", "PriceStep"))       #价格梯度
 
-        self.accKey = str(inireader.getValue("config", "acckey"))               #api接口
-        self.seckey = str(inireader.getValue("config", "seckey"))               #api密钥
+        self.accKey = str(self.inireader.getValue("config", "acckey"))               #api接口
+        self.seckey = str(self.inireader.getValue("config", "seckey"))               #api密钥
 
         self.account = None
         self.accountTest = None
@@ -51,7 +52,7 @@ class BTCCFIXClientApp(quickfix.Application):
 
     def initConfig(self, configname2):
         # // TODO Auto-generated method stub
-        tmp = IniReader(configname2)
+        tmp = IniReader.IniReader(configname2)
         return tmp
 
     def fromApp(self,msg,sessionID):

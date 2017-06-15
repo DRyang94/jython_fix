@@ -2,8 +2,24 @@
 #coding:utf-8
 import sys
 
-sys.path.append("lib/*.jar")
+
+
+
+sys.path.append("lib/backport-util-concurrent-3.0.jar")
+sys.path.append("lib/dom4j-1.6.1.jar")
+sys.path.append("lib/jcl-over-slf4j-1.6.3.jar")
+sys.path.append("lib/log4j-1.2.14.jar")
+sys.path.append("lib/mina-core-1.0.3.jar")
+sys.path.append("lib/mina-filter-ssl-1.0.3.jar")
+sys.path.append("lib/mx4j-3.0.2.jar")
+sys.path.append("lib/protobuf-java-2.5.0.jar")
+sys.path.append("lib/proxool-0.9.0RC2.jar")
+sys.path.append("lib/quickfixj-all-1.5.3.jar")
+sys.path.append("lib/sleepycat-je_2.1.30.jar")
+sys.path.append("lib/slf4j-api-1.6.3.jar")
+sys.path.append("lib/slf4j-log4j12-1.6.3.jar")
 sys.path.append("util")
+sys.path.append("data")
 
 import AccountManger as AccountManger
 import BTCCFIXClientApp
@@ -28,23 +44,18 @@ import quickfix.SocketInitiator as SocketInitiator
 #  * @author BTCChina
 #  */
 class BTCCFIXClient():
-	def __init__(self):
-		self.isTest = False  #是否以测试方式运行
-		self.main()
-	def main(self):
-		if self.isTest:
-			testobj = AccountMangerTest(None,1.62,0.0,0.0,True)
-			testobj.projectTest()
-		else:
-			app = BTCCFIXClientApp()
-			inputStream = self.getResourceAsStream("/quickfix-client.properties")
-			settings = SessionSettings(inputStream)
-			storeFactory = FileStoreFactory(settings)
-			logFactory = FileLogFactory(settings)
-			messageFactory = DefaultMessageFactory()
-			initiator = SocketInitiator(app, storeFactory, settings, logFactory, messageFactory)
-			initiator.block()
+    def __init__(self):
+        pass
+    def mainRun(self):
+        app = BTCCFIXClientApp.BTCCFIXClientApp()
+        inputStream = open('data/quickfix-client.properties','r') #self.getResourceAsStream("/data/quickfix-client.properties")
+        settings = SessionSettings(inputStream)
+        storeFactory = FileStoreFactory(settings)
+        logFactory = FileLogFactory(settings)
+        messageFactory = DefaultMessageFactory()
+        initiator = SocketInitiator(app, storeFactory, settings, logFactory, messageFactory)
+        initiator.block()
 
 if __name__ == '__main__':
     btccclient = BTCCFIXClient()
-    btccclient.main()
+    btccclient.mainRun()

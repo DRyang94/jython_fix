@@ -8,6 +8,7 @@ import quickfix.field.MarketDepth as MarketDepth
 import quickfix.field.SubscriptionRequestType as SubscriptionRequestType
 import quickfix.field.Symbol as Symbol
 
+import quickfix.fix44.MarketDataRequest as MarketDataRequest
 # /**
 #  * MarkertData Request
 #  * @author BTCChina
@@ -17,9 +18,9 @@ class BTCCMarketDataRequest():
         pass
     
     def marketDataFullSnapRequest(self,symbol):
-        tickerRequest = quickfix.fix44.MarketDataRequest()
+        tickerRequest = MarketDataRequest()
         
-        noRelatedSym = quickfix.fix44.MarketDataRequest.NoRelatedSym()
+        noRelatedSym = MarketDataRequest.NoRelatedSym()
         noRelatedSym.set(Symbol(symbol))
         tickerRequest.addGroup(noRelatedSym)
                 
@@ -49,9 +50,9 @@ class BTCCMarketDataRequest():
     #  * @return @tickerRequest request message
     #  */
     def myMarketData(self,symbol): 
-        tickerRequest = quickfix.fix44.MarketDataRequest()
+        tickerRequest = MarketDataRequest()
         
-        noRelatedSym = quickfix.fix44.MarketDataRequest.NoRelatedSym()
+        noRelatedSym = MarketDataRequest.NoRelatedSym()
         noRelatedSym.set(Symbol(symbol))
         tickerRequest.addGroup(noRelatedSym)
                 
@@ -139,7 +140,7 @@ class BTCCMarketDataRequest():
         return tickerRequest
     
 
-    def addMDType(tickerRequest, type):
-        g0 = quickfix.fix44.MarketDataRequest.NoMDEntryTypes()
+    def addMDType(self,tickerRequest, type):
+        g0 = MarketDataRequest.NoMDEntryTypes()
         g0.set(MDEntryType(type))
         tickerRequest.addGroup(g0)

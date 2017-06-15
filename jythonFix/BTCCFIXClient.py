@@ -3,6 +3,37 @@
 import sys
 
 
+#系统jar库
+
+# javabasepth = "/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/"
+
+# sys.path.append(javabasepth + "resources.jar")
+# sys.path.append(javabasepth + "rt.jar")
+# sys.path.append(javabasepth + "jsse.jar")
+# sys.path.append(javabasepth + "jce.jar")
+# sys.path.append(javabasepth + "charsets.jar")
+# sys.path.append(javabasepth + "jfr.jar")
+# sys.path.append(javabasepth + "ext/cldrdata.jar")
+# sys.path.append(javabasepth + "ext/dnsns.jar")
+# sys.path.append(javabasepth + "ext/jaccess.jar")
+# sys.path.append(javabasepth + "ext/jfxrt.jar")
+# sys.path.append(javabasepth + "ext/localedata.jar")
+# sys.path.append(javabasepth + "ext/nashorn.jar")
+# sys.path.append(javabasepth + "ext/sunec.jar")
+# sys.path.append(javabasepth + "ext/sunjce_provider.jar")
+# sys.path.append(javabasepth + "ext/sunpkcs11.jar")
+# sys.path.append(javabasepth + "ext/zipfs.jar")
+
+# extensionspth = "/System/Library/Java/Extensions/"
+# sys.path.append(extensionspth + "AppleScriptEngine.jar")
+# sys.path.append(extensionspth + "j3daudio.jar")
+# sys.path.append(extensionspth + "j3dcore.jar")
+# sys.path.append(extensionspth + "j3dutils.jar")
+# sys.path.append(extensionspth + "jai_codec.jar")
+# sys.path.append(extensionspth + "jar_core.jar")
+# sys.path.append(extensionspth + "mlibwrapper_jai.jar")
+# sys.path.append(extensionspth + "MRJToolkit.jar")
+# sys.path.append(extensionspth + "vecmath.jar")
 
 
 sys.path.append("lib/backport-util-concurrent-3.0.jar")
@@ -41,6 +72,7 @@ import quickfix.SessionNotFound as SessionNotFound
 import quickfix.SessionSettings as SessionSettings
 import quickfix.SocketInitiator as SocketInitiator
 
+
 # /**
 #  * BTCChina FIX API Client 
 #  * @author BTCChina
@@ -50,8 +82,9 @@ class BTCCFIXClient():
         pass
     def mainRun(self):
         app = BTCCFIXClientApp.BTCCFIXClientApp()
-        inputStream = open('data/quickfix-client.properties','r') #self.getResourceAsStream("/data/quickfix-client.properties")
-        settings = SessionSettings(inputStream)
+        # inputStream = open('data/quickfix-client.properties','r') #self.getResourceAsStream("/data/quickfix-client.properties")
+        # settings = SessionSettings(inputStream)
+        settings = SessionSettings('data/quickfix-client.properties')
         storeFactory = FileStoreFactory(settings)
         logFactory = FileLogFactory(settings)
         messageFactory = DefaultMessageFactory()

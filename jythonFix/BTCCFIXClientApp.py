@@ -1,5 +1,7 @@
 #!/usr/local/bin/jython
 #coding:utf-8
+import java
+import javax
 
 import java.io.IOException as IOException
 
@@ -20,6 +22,9 @@ import quickfix.UnsupportedMessageType as UnsupportedMessageType
 import quickfix.Application as Application
 
 import threading
+import BTCCMarketDataRequest
+
+import time
 # /**
 #  * BTCChina FIX Client
 #  * @author BTCChina
@@ -27,7 +32,7 @@ import threading
 class BTCCFIXClientApp(Application):
     def __init__(self):
         Application.__init__(self)
-        self.log = Logger.getLogger(BTCCFIXClientApp)
+        self.log = Logger.getLogger(Application)
     
         self.inireader = self.initConfig("data/config.txt");
         self.isTest = True   #是否以测试方式运行
@@ -47,7 +52,9 @@ class BTCCFIXClientApp(Application):
     
     def fromAdmin(self,msg,sessionID):
         self.log.info("receivedType:"+msg.getHeader().getString(35))
-        self.log.info(sessionID + "------ fromAdmin--------" + msg.toString())
+        self.log.info(str(sessionID) + "------ fromAdmin--------" + msg.toString())
+        print "aaaaaa"
+        print msg.toString()
     
 
     def initConfig(self, configname2):
@@ -56,33 +63,12 @@ class BTCCFIXClientApp(Application):
         return tmp
 
     def fromApp(self,msg,sessionID):
-        try:
-            if self.isTest:
-                if self.accountTest == None:
-                    self.accountTest = AccountMangerTest(sessionID,self.priceStep,self.oneCount,self.offset,self.accKey,self.secKey)
-                    print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
-                self.accountTest.decodeData(msg)
-            else:
-                if self.account == None:
-                    self.account = AccountManger(sessionID,self.priceStep,self.oneCount)
-                    print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
-                self.account.decodeData(msg)
-        except Exception, e:
-            self.log.warn("In BTCCFIXClientApp::fromApp(quickfix.Message msg, SessionID sessionID)::"+ex.getMessage())
-            try:
-                if self.isTest:
-                    if self.accountTest == None:
-                        self.accountTest = AccountMangerTest(sessionID,self.priceStep,self.oneCount,self.offset,self.accKey,self.secKey)
-                        print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
-                    self.accountTest.decodeData(msg)
-                else:
-                    if self.account == None:
-                        self.account = AccountManger(sessionID,self.priceStep,self.oneCount)
-                        print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
-                    self.account.decodeData(msg)
-            except Exception, e:
-                print e
-                raise e
+        self.log.info(str(sessionID) + "------ fromApp--------" + msg.toString())
+        # if self.account == None:
+        #     self.account = AccountManger.AccountManger(sessionID,self.priceStep,self.oneCount)
+        #     print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
+        # self.account.decodeData(msg)
+
     def onCreate(self,sessionID):
         print 'id======>',sessionID
         try:
@@ -99,7 +85,7 @@ class BTCCFIXClientApp(Application):
             Session.lookupSession(sid).send(message)
             print "sid------>",sid
             try:
-                sleep(5000)
+                time.sleep(5)
             except Exception, e:
                 print e
                 raise e

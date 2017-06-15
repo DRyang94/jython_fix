@@ -2,7 +2,6 @@
 #coding:utf-8
 # package com.btcchina.fix.util;
 import sys
-sys.path.append("lib/*.jar")
 
 import java.util.Iterator as Iterator
 import java.util.LinkedList as LinkedList
@@ -40,7 +39,7 @@ import time
 class AccountManger():
     def __init__(self,pID,pStepPrice,pTradeCount):
         self.log = Logger.getLogger(AccountManger)      #//log输出工具
-        self.dataDict = DataDictionary("selfFIX44.xml")                            #//new DataDictionary("FIX44.xml"); //fix4.4协议
+        self.dataDict = DataDictionary("data/selfFIX44.xml")                            #//new DataDictionary("FIX44.xml"); //fix4.4协议
         self.msgPrinter = MessagePrinter()
         self.sessionID = pID                           #//fix绘话ID
         #买一
@@ -180,12 +179,14 @@ class AccountManger():
         tmpprice = 0.5      #下单价与深度价的差值,使交易可以马上成交
         if math.abs((self.buyOnePrice - self.lastSetpPrice) - tmpprice) > self.priceStep and self.buyOnePrice > self.lastSetpPrice:
             if self.heaveGood >= self.tradeCount:
-                self.sell(self.buyOnePrice - tmpprice) #价格上涨了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
+                print 'sell-------->'
+                #self.sell(self.buyOnePrice - tmpprice) #价格上涨了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
         elif math.asb((self.lastSetpPrice - self.sellOnePrice)-tmpprice) > self.priceStep and self.lastSetpPrice > self.sellOnePrice:
             buytmp = self.sellOnePrice + tmpprice
             if self.heaveMoney >= self.tradeCount * buytmp:
                 #//货币够，可以作买入操作
-                self.buy(buytmp)                        #//价格下跌了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
+                print 'buy---------->'
+                #self.buy(buytmp)                        #//价格下跌了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
     
     
     #即时行情数据数组处理

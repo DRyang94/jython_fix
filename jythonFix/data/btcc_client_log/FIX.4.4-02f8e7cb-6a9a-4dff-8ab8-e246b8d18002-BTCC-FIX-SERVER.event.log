@@ -1,15 +1,5 @@
-20170615-16:43:37: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
-20170615-16:43:37: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER
-20170615-16:43:38: Initiated logon request
-20170615-16:43:41: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
-20170615-16:43:41: Received logon
-20170615-16:49:34: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
-20170615-16:49:34: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER
-20170615-16:49:35: Initiated logon request
-20170615-16:49:36: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
-20170615-16:49:36: Received logon
-20170615-16:52:16: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
-20170615-16:52:16: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER
-20170615-16:52:17: Initiated logon request
-20170615-16:52:17: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
-20170615-16:52:17: Received logon
+20170619-08:44:43: Session FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER schedule is daily, 00:00:00-UTC - 00:00:00-UTC
+20170619-08:44:43: Created session: FIX.4.4:02f8e7cb-6a9a-4dff-8ab8-e246b8d18002->BTCC-FIX-SERVER
+20170619-08:44:45: Initiated logon request
+20170619-08:44:47: Logon contains ResetSeqNumFlag=Y, resetting sequence numbers to 1
+20170619-08:44:47: Received logon

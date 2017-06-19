@@ -64,10 +64,9 @@ class BTCCFIXClientApp(Application):
 
     def fromApp(self,msg,sessionID):
         self.log.info(str(sessionID) + "------ fromApp--------" + msg.toString())
-        # if self.account == None:
-        #     self.account = AccountManger.AccountManger(sessionID,self.priceStep,self.oneCount)
-        #     print "config--->" + str(self.priceStep) + "," + str(self.oneCount)
-        # self.account.decodeData(msg)
+        if self.account == None:
+            self.account = AccountManger.AccountManger(str(sessionID),self.priceStep,self.oneCount,self.log)
+        self.account.decodeData(msg)
 
     def onCreate(self,sessionID):
         print 'id======>',sessionID

@@ -11,6 +11,7 @@ import org.apache.log4j.Logger as Logger
 
 import BTCCMarketDataRequest
 import BTCCTradingRequest
+import MessagePrinter
 
 import quickfix.ConfigError as ConfigError
 # //import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,10 +38,10 @@ import math
 import time
 
 class AccountManger():
-    def __init__(self,pID,pStepPrice,pTradeCount):
-        self.log = Logger.getLogger(AccountManger)      #//log输出工具
+    def __init__(self,pID,pStepPrice,pTradeCount,plog):
+        self.log = plog #Logger.getLogger(AccountManger)      #//log输出工具
         self.dataDict = DataDictionary("data/selfFIX44.xml")                            #//new DataDictionary("FIX44.xml"); //fix4.4协议
-        self.msgPrinter = MessagePrinter()
+        self.msgPrinter = MessagePrinter.MessagePrinter()
         self.sessionID = pID                           #//fix绘话ID
         #买一
         self.buyOneCount = 0.0                          #//买一价数量
@@ -59,8 +60,8 @@ class AccountManger():
 
         #帐户初始化
         self.baseMoney = 0.0                            #起始资金来自帐户数据获取
-        self.priceStep = pStepPrice                            #解发价格梯度
-        self.tradeCount = pTradeCount                           #单次交易量
+        self.priceStep = float(pStepPrice)                            #解发价格梯度
+        self.tradeCount = float(pTradeCount)                           #单次交易量
     
         #帐户实时更新数据
         self.heaveMoney = 0.0                           #当前货币量
@@ -97,11 +98,11 @@ class AccountManger():
         #挂单信息
         self.orderIDs = []                              #已下单，但未完全成交的订单ID
         #市场数据状态
-        self.isReqMarkDataUpdate = true                 #是否开启市场数据更新
+        self.isReqMarkDataUpdate = True                 #是否开启市场数据更新
     
         #初始化
-        self.getAccountData()
-        self.orderCheckAll()
+        # self.getAccountData()
+        # self.orderCheckAll()
 
     
     #获取帐户信息
@@ -223,7 +224,7 @@ class AccountManger():
         self.testTrade();
 
     #刷新交易数据,买一，卖一，当前成交
-    def DataRefresh(fieldMap):
+    def DataRefresh(self,fieldMap):
         groupsKeys = fieldMap.groupKeyIterator()
         while groupsKeys.hasNext():
             groupCountTag = int(groupsKeys.next().intValue())
@@ -241,31 +242,31 @@ class AccountManger():
 
 
     #已知定单数据更新，如已成交，或部分成交，或取消成功消息
-    def tradeOrderUpdate(fieldMap):
+    def tradeOrderUpdate(self,fieldMap):
         pass
 
     #定单编号查询定单
-    def checkOrderBackWithID(fieldMap):
+    def checkOrderBackWithID(self,fieldMap):
         pass
 
     #批量定单查询
-    def checkOrdersBack(fieldMap):
+    def checkOrdersBack(self,fieldMap):
         pass
 
     #交易购买消息反回
-    def tradeBuyOrderBack(fieldMap):
+    def tradeBuyOrderBack(self,fieldMap):
         pass
 
     #交易出售消息反回
-    def tradeSellOrderBack(fieldMap):
+    def tradeSellOrderBack(self,fieldMap):
         pass
 
     #交易取消
-    def cancelOrderBack(fieldMap):
+    def cancelOrderBack(self,fieldMap):
         pass
 
     #交易执行报告拒绝
-    def tradeExecuteBadBack(fieldMap):
+    def tradeExecuteBadBack(self,fieldMap):
         pass
 
     # //--------------------------------------------------------------------
@@ -374,27 +375,31 @@ class AccountManger():
     
     #得到服务器数据信息
     def decodeData(self,message):
+        print '获取到了数据'
+        print message.toString()
         msgType = message.getHeader().getString(MsgType.FIELD)
-        print "getMsgType:" + str(msgType)
-        if msgType == "X": #市场行情数据即时更新
-            self.DataRefresh(message)
-        elif msgType == "V": #取消市场行情即时更新
-            print "hello V"
-        elif msgType == "W": #////市场行情数据快照('W'类型)
-            self.DataRefresh(message)
-            print "hello W"
-        elif msgType == "Y": #市场数据请求拒绝
-            print "hello Y"
-        #帐户请求
-        elif msgType == "U1001": #帐户信息
-            self.setAccountRes(message)
-            # self.msgPrinter.print(dataDict, message);
-        elif msgType == "8":     #交易定单,指定定单ID查询,批量定单查询,定单取消
-            self.getServerDataTag8(message)
-            # self.msgPrinter.print(dataDict, message)
-        else:
-            print "msgPrinter print"
-            # self.msgPrinter.print(dataDict, message);
+        print msgType
+        self.msgPrinter.mpprint(self.dataDict, message);
+        # print "getMsgType:" + str(msgType)
+        # if msgType == "X": #市场行情数据即时更新
+        #     self.DataRefresh(message)
+        # elif msgType == "V": #取消市场行情即时更新
+        #     print "hello V"
+        # elif msgType == "W": #////市场行情数据快照('W'类型)
+        #     self.DataRefresh(message)
+        #     print "hello W"
+        # elif msgType == "Y": #市场数据请求拒绝
+        #     print "hello Y"
+        # #帐户请求
+        # elif msgType == "U1001": #帐户信息
+        #     self.setAccountRes(message)
+        #     # self.msgPrinter.print(dataDict, message);
+        # elif msgType == "8":     #交易定单,指定定单ID查询,批量定单查询,定单取消
+        #     self.getServerDataTag8(message)
+        #     # self.msgPrinter.print(dataDict, message)
+        # else:
+        #     print "msgPrinter print"
+        #     # self.msgPrinter.print(dataDict, message);
 
     #获取交易相关回复
     def getServerDataTag8(self,fieldMap):

@@ -36,7 +36,7 @@ class MessagePrinter():
     def printFieldMap(self,prefix,dd,msgType,fieldMap):
         fieldIterator = fieldMap.iterator()
         while fieldIterator.hasNext():
-            Field field = fieldIterator.next();
+            field = fieldIterator.next();
             if not self.isGroupCountField(dd, field): 
                 value = fieldMap.getString(field.getTag())
                 if dd.hasFieldValue(field.getTag()): 
@@ -45,7 +45,7 @@ class MessagePrinter():
         groupsKeys = fieldMap.groupKeyIterator();
         while groupsKeys.hasNext():
             groupCountTag = int(groupsKeys.next())
-            print prefix + dd.getFieldName(groupCountTag) + ": count = " + fieldMap.getInt(groupCountTag))
+            print str(prefix) + str(dd.getFieldName(groupCountTag)) + ": count = " + str(fieldMap.getInt(groupCountTag))
             g = Group(groupCountTag, 0)
             i = 1;
             while fieldMap.hasGroup(i, groupCountTag):
@@ -77,7 +77,7 @@ class MessagePrinter():
             for i in range(fieldList.getLength()):
                 fieldNode = fieldList.item(i)
                 if fieldNode.getNodeType() == Node.ELEMENT_NODE:
-                    fieldElement = (Element) fieldNode;
+                    fieldElement = fieldNode;
                     field_number=fieldElement.getAttribute("number")
                     print "number : " + field_number
                     field_name=fieldElement.getAttribute("name");
@@ -100,17 +100,17 @@ class MessagePrinter():
 
             for i in range(fieldList.getLength()):
                 fieldNode = fieldList.item(i)
-                if (fieldNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element fieldElement = (Element) fieldNode;
-                    String field_number=fieldElement.getAttribute("number");
-                    field_name=fieldElement.getAttribute("name");
-                    if(group.equals(field_number)){
-                        NodeList value=fieldElement.getElementsByTagName("value");
+                if fieldNode.getNodeType() == Node.ELEMENT_NODE:
+                    fieldElement = fieldNode;
+                    field_number = fieldElement.getAttribute("number");
+                    field_name = fieldElement.getAttribute("name");
+                    if group.equals(field_number):
+                        value=fieldElement.getElementsByTagName("value");
                         for leaf in range(value.getLength()):
-                            valueNode=value.item(leaf)
-                            valueElement=(Element)valueNode
-                            num=valueElement.getAttribute("enum")
-                            field_name=valueElement.getAttribute("description")
+                            valueNode = value.item(leaf)
+                            valueElement = valueNode
+                            num = valueElement.getAttribute("enum")
+                            field_name = valueElement.getAttribute("description")
                             if tag == num:
                                 return field_name;
                         return field_name; 

@@ -80,7 +80,8 @@ class BTCCFIXClientApp(Application):
         print 'sessionID----->',sessionID
         def logonthreadrun(sid):
             marketreauest = BTCCMarketDataRequest.BTCCMarketDataRequest()
-            message = marketreauest.myMarketData("BTCCNY")
+            # message = marketreauest.myMarketData("BTCCNY")
+            message = marketreauest.myMarketData("LTCCNY")
             Session.lookupSession(sid).send(message)
             print "sid------>",sid
             try:

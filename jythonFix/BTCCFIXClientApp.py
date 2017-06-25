@@ -52,9 +52,9 @@ class BTCCFIXClientApp(Application):
     
     def fromAdmin(self,msg,sessionID):
         self.log.info("receivedType:"+msg.getHeader().getString(35))
-        self.log.info(str(sessionID) + "------ fromAdmin--------" + msg.toString())
-        print "aaaaaa"
-        print msg.toString()
+        # self.log.info(str(sessionID) + "------ fromAdmin--------" + msg.toString())
+        # print "aaaaaa"
+        # print msg.toString()
     
 
     def initConfig(self, configname2):
@@ -81,7 +81,7 @@ class BTCCFIXClientApp(Application):
         def logonthreadrun(sid):
             marketreauest = BTCCMarketDataRequest.BTCCMarketDataRequest()
             # message = marketreauest.myMarketData("BTCCNY")
-            message = marketreauest.myMarketData("LTCCNY")
+            message = marketreauest.myMarketData("LTCCNY")                    #获取最新买卖一价和最新成交价
             Session.lookupSession(sid).send(message)
             print "sid------>",sid
             try:

@@ -45,11 +45,32 @@ class AccountManger():
         self.msgPrinter = MessagePrinter.MessagePrinter()
         self.jythonPrinter = MsgJythonPrint.MsgJythonPrint()
         self.sessionID = pID                           #//fix绘话ID
-
+        #买一
+        self.buyOneCount = 0.0                          #//买一价数量
+        self.buyOnePrice = 0.0                          #买一价
+        #卖一
+        self.sellOneCount = 0.0                         #卖一价数量
+        self.sellOnePrice = 0.0                         #卖一价
     
         #最新成交价
         self.nowTradePrice = 0.0                        #最新成交价
 
+        #触发价
+        self.lastSetpPrice = 0.0                        #上次梯度价格
+        self.nextBuyPrice = 0.0                         #下次触发买单价
+        self.nextSellPrice = 0.0                        #下次解发卖单价
+
+        #帐户初始化
+        self.baseMoney = 0.0                            #起始资金来自帐户数据获取
+        self.priceStep = float(pStepPrice)                            #解发价格梯度
+        self.tradeCount = float(pTradeCount)                           #单次交易量
+    
+        #帐户实时更新数据
+        self.heaveMoney = 0.0                           #当前货币量
+        self.heaveGood = 0.0                            #当前物品量
+        self.allRes = 0.0                               #当前总资产数量
+        self.nowPrice = 0.0                             #当前成成交价,当获取到的最新成交价不在买一卖一之内时，最新成交价使用买一价与卖一价的中间值,此值不参与交易运算，只作收益统计
+        self.yieldRate = 0.0                            #收效率=(allRes/baseMoney)*100%
     
         #帐户挂单冻结信息
         self.iceMoney = 0.0                             #冻结货币
@@ -60,17 +81,21 @@ class AccountManger():
         self.tradeSellCount = 0                         #交易出售次数
         self.outRangeMoneyCount = 0                     #交易无货币次数
         self.outRangeGoodCount = 0                      #交易无物品次数
-        self.maxPrice = 0.0                             #24小时最高价
-        self.minPrice = 0.0                             #24小时最低价
+        self.maxPrice = 0.0                             #系统运行到现在的市场最大成交价
+        self.minPrice = 0.0                             #系统运行到现在的市场最小成交价
     
         #交易
-        self.sellOrderID = ""                           #出售定单挂单ID
+        self.sellOrderID = ""                           #出信定单挂单ID
         self.sellOrderType = 0                          #出售定单状态,0.未下单,1.正在挂单,2.部分成交
     
         self.buyOrderID = ""                            #购买定单挂单ID
         self.buyOrderType = 0                           #购买定单状态,0.未下单,1.正在挂单,2.部分成交
     
         self.lastTradePrice = 0.0                       #上次定单成交价,不作运算，只作分析用
+        self.continuityBuyTimes = 0                     #连续购买次数,只作分析用
+        self.continuitySellTimes = 0                    #连续出购次数,只作分析用
+        self.continuityOutRanceMonye = 0                #连续无货币次数,用来提示价格暴涨
+        self.continuityOutRanceGood = 0                 #连续无物品次数,用来提示价格暴跌
     
         #挂单信息
         self.orderIDs = []                              #已下单，但未完全成交的订单ID
@@ -102,7 +127,6 @@ class AccountManger():
         self.log.info("getAccountData-------"+str(sessionID))
     
     
-    #帐户资产信息
     def accountfunc(self,fieldMap):
         fieldIterator = fieldMap.iterator()
         fname = ""
@@ -128,21 +152,96 @@ class AccountManger():
                             print "cny=" + str(value)
                 except Exception, e:
                     print e
-                    raise e    
+                    raise e
+
+    #设置帐户数据
+    def setAccountRes(self,fieldMap):
+        groupsKeys = fieldMap.groupKeyIterator()
+        while groupsKeys.hasNext():
+            groupCountTag = int(groupsKeys.next().intValue())
+            groupTagstr = 0
+            try:
+                groupTagstr = fieldMap.getInt(groupCountTag)
+            except Exception, e:
+                print e
+                raise e
+            g = Group(groupCountTag, 0)
+            i = 1
+            while fieldMap.hasGroup(i,groupCountTag):
+                try:
+                    fieldMap.getGroup(i,g)
+                    self.accountfunc(g)
+                except Exception, e:
+                    raise e
+                i += 1
+    
 
     
     #测试是否可下单
     def testTrade(self):
-        pass
+        tmpprice = 0.5      #下单价与深度价的差值,使交易可以马上成交
+        if math.abs((self.buyOnePrice - self.lastSetpPrice) - tmpprice) > self.priceStep and self.buyOnePrice > self.lastSetpPrice:
+            if self.heaveGood >= self.tradeCount:
+                print 'sell-------->'
+                #self.sell(self.buyOnePrice - tmpprice) #价格上涨了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
+        elif math.asb((self.lastSetpPrice - self.sellOnePrice)-tmpprice) > self.priceStep and self.lastSetpPrice > self.sellOnePrice:
+            buytmp = self.sellOnePrice + tmpprice
+            if self.heaveMoney >= self.tradeCount * buytmp:
+                #//货币够，可以作买入操作
+                print 'buy---------->'
+                #self.buy(buytmp)                        #//价格下跌了作出售操作，如售前要先看之前的定单是否有成交,没有则取消
     
     
     #即时行情数据数组处理
     def marketDatarefreshtField(self,fieldMap):
-        pass
+        fieldIterator = fieldMap.iterator()
+        tname = ""
+        while fieldIterator.hasNext():
+            field = fieldIterator.next()
+            if not self.isGroupCountField(field):
+                value = ""
+                try:
+                    value = fieldMap.getString(field.getTag())
+                    #tname
+                    if self.dataDict.hasFieldValue(field.getTag()): 
+                        value = self.dataDict.getValueName(field.getTag(), value);
+                    #//行情数据
+                    if self.dataDict.getFieldName(field.getTag()) == "MDEntryType":
+                        tname = value
+                    elif self.dataDict.getFieldName(field.getTag()) == "MDEntryType":
+                        if tname == "BID":
+                            self.buyOnePrice = float(value)  #买一价0
+                        elif tname == "OFFER":
+                            self.sellOnePrice = float(value) #卖一价
+                        elif tname == "TRADE":               #最新成交
+                            tmpvalue = float(value)
+                            if tmpvalue >= self.buyOnePrice and tmpvalue <= self.sellOnePrice:
+                                self.nowTradePrice = tmpvalue
+                            else:
+                                self.nowTradePrice = (self.buyOnePrice + self.sellOnePrice)/2.0
+                except Exception, e:
+                    print e
+                    raise e
+        #测试是否达到下单要求
+        self.testTrade();
 
     #刷新交易数据,买一，卖一，当前成交
     def DataRefresh(self,fieldMap):
-        pass
+        groupsKeys = fieldMap.groupKeyIterator()
+        while groupsKeys.hasNext():
+            groupCountTag = int(groupsKeys.next().intValue())
+            g = Group(groupCountTag, 0)
+            i = 1
+            while fieldMap.hasGroup(i, groupCountTag):
+                if i > 1:
+                    print "-----------"
+                try:
+                    fieldMap.getGroup(i, g)
+                    self.marketDatarefreshtField(g)
+                except Exception, e:
+                    raise e
+                i += 1
+
 
     #已知定单数据更新，如已成交，或部分成交，或取消成功消息
     def tradeOrderUpdate(self,fieldMap):
@@ -371,5 +470,3 @@ class AccountManger():
     def isGroupCountField(self,field):
         return self.dataDict.getFieldTypeEnum(field.getTag()) == FieldType.NumInGroup
 
-if __name__ == '__main__':
-    account = AccountManger(None,None,None,None)

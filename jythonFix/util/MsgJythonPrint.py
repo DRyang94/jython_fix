@@ -9,12 +9,12 @@ from xml.etree import ElementTree
 testlogpth = '../data/btcc_client_log/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.messages.log'
 
 class MsgJythonPrint():
-    def __init__(self,fixxmlpth = '../data/selfFIX44.xml'):
+    def __init__(self,fixxmlpth = 'data/selfFIX44.xml'):
         self.fixpth = fixxmlpth
         f = open(self.fixpth,'r')
         text = f.read()
         f.close()
-        self.fix44Root = ElementTree.parse("../data/selfFIX44.xml") 
+        self.fix44Root = ElementTree.parse(self.fixpth) 
         self.fieldDic = {}
         self.fieldDataTypeDic = {}
         self.fieldDataValueEnum = {}

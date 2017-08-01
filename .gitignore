@@ -14,3 +14,5 @@ jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC
 jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.session
 
 jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.targetseqnums
+
+jythonFix/util/AccountManger$py.class

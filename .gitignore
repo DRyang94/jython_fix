@@ -1,0 +1,16 @@
+
+*.class
+
+jythonFix/data/btcc_client_log/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.event.log
+
+jythonFix/data/btcc_client_log/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.messages.log
+
+jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.body
+
+jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.header
+
+jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.senderseqnums
+
+jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.session
+
+jythonFix/data/btcc_fix_client/FIX.4.4-02f8e7cb-6a9a-4dff-8ab8-e246b8d18002-BTCC-FIX-SERVER.targetseqnums
